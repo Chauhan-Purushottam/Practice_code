@@ -32,8 +32,9 @@ public class Binary_tree {
         
     }
     static Node root = null;
-    static ArrayList<Integer> arr = new ArrayList<Integer>();
-    static Node insert(Node root,int data){
+    static ArrayList<Integer> arr = new ArrayList<Integer>();       //Array to store inorder traversalof binary tree
+    
+    static Node insert(Node root,int data){                         //Insert into binary tree
         Queue<Node> queue = new LinkedList<>();
         if(root!=null){
             queue.add(root);
@@ -62,14 +63,15 @@ public class Binary_tree {
         return root;
     }
     
-    static void inorder(Node root){
+    static void inorder(Node root){                                 //Inorder traversal of tree (Recursive approach)
         if(root!=null){
             inorder(root.left);
             System.out.print(root.data+" ");
             inorder(root.right);
         }
     }
-    static void inorder1(Node root, ArrayList<Integer> arr){
+   
+    static void inorder1(Node root, ArrayList<Integer> arr){        // storing Inorder traversal of binary tree
         if(root!=null){
             inorder1(root.left,arr);
             arr.add(root.data);
@@ -77,7 +79,7 @@ public class Binary_tree {
         }
     }
         
-    static Node bst(Node root, ArrayList<Integer> arr){
+    static Node bst(Node root, ArrayList<Integer> arr){         //copying the sorted data again in inorder traversal of binary tree
         if(root!=null && i<arr.size()){
             bst(root.left,arr);
             root.data = arr.get(i++);
@@ -85,15 +87,16 @@ public class Binary_tree {
         }
         return root;
     }
-    static Node bstConversion(Node root){
+    
+    static Node bstConversion(Node root){                       //utility function for BST conversion
        
         inorder1(root,arr);
         Collections.sort(arr);
         Node temp = bst(root,arr);
         return temp;
     }
+   
     public static void main(String[] args) {
-        // TODO code application logic here
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter the number of Node in Binary tree");
         int n = sc.nextInt();
