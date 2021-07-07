@@ -1,4 +1,4 @@
-import java.io.*;
+package com.company.main.graph;
 import java.util.*;
 @SuppressWarnings("unchecked")
 class Graph

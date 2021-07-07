@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package jobscheduling;
+package com.company.main.random;
 
 import java.util.Arrays;
 import java.util.Comparator;
@@ -14,10 +14,6 @@ import java.util.Scanner;
  * @author purushottam
  */
 public class JobScheduling {
-
-    /**
-     * @param args the command line arguments
-     */
     
     public static class Job{
         String id;

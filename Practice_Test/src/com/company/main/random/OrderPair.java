@@ -1,3 +1,4 @@
+package com.company.main.random;
 //Given an array A on size N, you need to find the number of ordered pairs (i,j) such that (i<j) and (A[i]>A[j]).
 
 //import for Scanner and other utility classes*/
@@ -6,7 +7,7 @@ import java.util.*;
 class OrderPair {
     public static long count = 0;
 
-    void merge(int arr[] , int start, int mid, int end)
+    void merge(int[] arr, int start, int mid, int end)
     {
         int p = start, q = mid+1;
         int []temp  = new int[end-start+1];
@@ -30,7 +31,7 @@ class OrderPair {
         
     }
     
-    void merge_sort(int arr[] , int start , int end)
+    void merge_sort(int[] arr, int start , int end)
     {
         if(start < end){
             
@@ -44,19 +45,19 @@ class OrderPair {
         }
     }
    
-    public static void main(String args[] ) throws Exception {
+    public static void main(String[] args) throws Exception {
         
         //Scanner
         Scanner s = new Scanner(System.in);
         int n = s.nextInt();
-        int arr[] = new int[n];
+        int[] arr = new int[n];
         
         for(int i = 0;i<n;i++)
             arr[i] = s.nextInt();
         
         OrderPair op = new OrderPair();
         op.merge_sort(arr,0,n-1);
-        System.out.println(op.count);
+        System.out.println(count);
 
     }
 }

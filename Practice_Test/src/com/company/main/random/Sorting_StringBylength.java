@@ -1,4 +1,4 @@
-
+package com.company.main.random;
 //Given Set of String sort the set according to the length of the string maintain the order if the length is same.
 /*Input :
 3
@@ -24,7 +24,7 @@ class Sorting_StringBylength {
         }
     
     }
-    public static void main(String args[] ) throws Exception {
+    public static void main(String[] args) throws Exception {
         
         //Scanner
         Scanner s = new Scanner(System.in);
@@ -32,15 +32,11 @@ class Sorting_StringBylength {
         
         for(int i = 0;i<=n;i++)
         {
-          
-		    ArrayList<String> arr = new ArrayList<String>();
+
             String st = s.nextLine();
             String []str = st.split(" ");
-            for(String a: str)
-            {
-                arr.add(a);
-            }
-            Collections.sort(arr,new StringComparator());
+            ArrayList<String> arr = new ArrayList<String>(Arrays.asList(str));
+            arr.sort(new StringComparator());
             for(String a: arr)
                 System.out.print(a+" ");
          System.out.println(" ");

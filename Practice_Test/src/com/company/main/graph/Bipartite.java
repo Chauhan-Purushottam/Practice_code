@@ -1,6 +1,8 @@
+package com.company.main.graph;
+
 import java.util.*;
 import java.lang.*;
-import java.io.*;
+
 class Bipartite
 {
 	int V,E;

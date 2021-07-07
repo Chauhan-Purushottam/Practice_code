@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package activityselection;
+package com.company.main.random;
 
 import java.util.Arrays;
 import java.util.Comparator;
